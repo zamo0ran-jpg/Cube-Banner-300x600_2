@@ -26,7 +26,6 @@ html, body {
   transform-style: preserve-3d;
 }
 
-/* === Cube-Setup === */
 .cube {
   --w: 290px;
   --h: 580px;
@@ -41,7 +40,6 @@ html, body {
   will-change: transform;
 }
 
-/* === 3D-Drehung (unendlich wiederholend, 24s Loop) === */
 @keyframes cube-spin {
   0%, 20%   { transform: scale(var(--scale)) rotateY(0deg); }
   25%, 45%  { transform: scale(var(--scale)) rotateY(-90deg); }
@@ -50,7 +48,6 @@ html, body {
   100%      { transform: scale(var(--scale)) rotateY(-360deg); }
 }
 
-/* === Seiten === */
 .side {
   position: absolute;
   inset: 0;
@@ -73,7 +70,6 @@ html, body {
   pointer-events: none;
 }
 
-/* === Barrierefreiheit & Performance === */
 @media (prefers-reduced-motion: reduce) {
   .cube { animation: none; }
 }
